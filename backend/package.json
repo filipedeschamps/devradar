@@ -1,0 +1,25 @@
+{
+  "name": "devradar",
+  "version": "1.0.0",
+  "description": "Projeto resultado da Semana Omnistack #10",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipedeschamps/devradar.git"
+  },
+  "author": "filipedeschamps",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filipedeschamps/devradar/issues"
+  },
+  "homepage": "https://github.com/filipedeschamps/devradar#readme",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.7",
+    "nodemon": "^2.0.2"
+  }
+}
