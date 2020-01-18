@@ -23,7 +23,8 @@
     "react-native-web": "~0.11.7",
     "react-native-webview": "7.4.3",
     "react-navigation": "^4.0.10",
-    "react-navigation-stack": "^2.0.15"
+    "react-navigation-stack": "^2.0.15",
+    "socket.io-client": "^2.3.0"
   },
   "devDependencies": {
     "babel-preset-expo": "~8.0.0",

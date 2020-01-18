@@ -3,9 +3,9 @@ const Dev = require('../models/dev.js')
 module.exports = {
     async index(request, response) {
         const { longitude, latitude, techs } = request.query
-
+        
         const techsArray = techs.split(',').map(tech => tech.trim())
-
+        
         const devs = await Dev.find({
             techs: {
                 $in: techsArray
@@ -20,7 +20,9 @@ module.exports = {
                 }
             }
         })
-
+        
+        console.log(`> /search: ${devs.length} results`)
+        
         response.json(devs)
     }
 }

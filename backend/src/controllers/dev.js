@@ -1,5 +1,6 @@
 const axios = require('axios')
 const Dev = require('../models/dev.js')
+const { findConnections, sendMessage } = require('../websocket.js')
 
 module.exports = {
     async index(request, response) {
@@ -32,6 +33,16 @@ module.exports = {
                     coordinates: [longitude, latitude]
                 }
             })
+
+            const sendSocketMessageTo = findConnections(
+                { latitude, longitude },
+                techsArray
+            )
+
+            console.log(`> sendSocketMessageTo: ${sendSocketMessageTo.length}`)
+
+            sendMessage(sendSocketMessageTo, 'new-dev', dev)
+
         }
 
         response.json(dev)
